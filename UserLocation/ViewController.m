@@ -12,11 +12,37 @@
 
 @end
 
-@implementation ViewController
+@implementation ViewController{
+    CLLocationManager *locationManager;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    
+}
+-(void)viewDidAppear:(BOOL)animated{
+    locationManager = [CLLocationManager new];
+    [locationManager requestAlwaysAuthorization];
+    locationManager.delegate = self;
+    [locationManager startUpdatingLocation];
+    
+    NSLog(@"latitude is : %f and longitude is :%f",locationManager.location.coordinate.latitude,locationManager.location.coordinate.longitude);
+    
+    CLGeocoder *geocoder = [CLGeocoder new];
+    [geocoder reverseGeocodeLocation:locationManager.location completionHandler:^(NSArray<CLPlacemark *> *  placemarks, NSError *  error) {
+        NSLog(@"%@",[placemarks objectAtIndex:0]);
+    }];
+    
+    
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
+
+    
+    
+    
 }
 
 
@@ -25,5 +51,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
+    
+    
+}
 
 @end

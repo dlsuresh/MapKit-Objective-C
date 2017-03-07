@@ -15,6 +15,7 @@
 		F68075F51E5AF404005DEA0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68075F31E5AF404005DEA0D /* LaunchScreen.storyboard */; };
 		F68076001E5AF404005DEA0D /* UserLocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F68075FF1E5AF404005DEA0D /* UserLocationTests.m */; };
 		F680760B1E5AF404005DEA0D /* UserLocationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F680760A1E5AF404005DEA0D /* UserLocationUITests.m */; };
+		F680761A1E5AF43B005DEA0D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68076191E5AF43B005DEA0D /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		F68076061E5AF404005DEA0D /* UserLocationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserLocationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F680760A1E5AF404005DEA0D /* UserLocationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserLocationUITests.m; sourceTree = "<group>"; };
 		F680760C1E5AF404005DEA0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F68076191E5AF43B005DEA0D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F680761A1E5AF43B005DEA0D /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +88,7 @@
 				F68075FE1E5AF404005DEA0D /* UserLocationTests */,
 				F68076091E5AF404005DEA0D /* UserLocationUITests */,
 				F68075E31E5AF404005DEA0D /* Products */,
+				F68076181E5AF43B005DEA0D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +142,14 @@
 				F680760C1E5AF404005DEA0D /* Info.plist */,
 			);
 			path = UserLocationUITests;
+			sourceTree = "<group>";
+		};
+		F68076181E5AF43B005DEA0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F68076191E5AF43B005DEA0D /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
